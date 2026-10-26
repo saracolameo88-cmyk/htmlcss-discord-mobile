@@ -8,7 +8,7 @@ body {
     position: relative;
     width: 512px;
     /* O il colore di sfondo scuro di Discord che preferisci */
-    font-family: sans-serif;
+    font-family: "DM Sans", "Sigmar", sans-serif;
     /* Poi metteremo il font corretto se serve */
     margin: 0 auto;
     border: 1px dashed gray;
@@ -16,32 +16,161 @@ body {
     color: rgb(255, 255, 255);
 }
 
+/* CONTENITORE */
+
 .contenitore {
     position: relative;
-    background-color: #0d042c;
+    background: linear-gradient(195deg,
+            #07002F 5%,
+            #1c168f 9%,
+            #232A9E 35%,
+            #504baf 55%,
+            #232A9E 75%,
+            #15106D 100%);
     padding: 30px 40px;
+
+    h1,
+    h2 {
+        font-family: "Sigmar";
+        text-transform: uppercase;
+        line-height: 0.9;
+        font-weight: lighter;
+
+
+    }
+
+    p {
+        font-family: "DM Sans";
+
+    }
 
     img,
     video {
         width: 100%;
         height: auto;
         display: block;
+        border-radius: 50px;
     }
 }
 
+.container .viedo {
+    border-radius: 50px;
+}
+
+/* DISTANZA DELLE CARD */
+.contenitore,
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+}
+
+/* HEADER MENU */
 
 .header {
     display: flex;
     position: sticky;
     top: 0;
     z-index: 100;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
-    padding: 20px 30px;
-    background-color: rgb(1, 38, 71);
+    padding: 10px 30px;
+    background-color: rgb(89, 106, 219);
+
+    button {
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        border: none;
+        color: #0d042c;
+        width: 150px;
+        font-family: 'DM Sans';
+        font-weight: bold;
+        width: 150px;
+        margin-left: auto;
+        margin-right: 20px;
+    }
+}
+
+.men {
+    width: 40px;
+    background-color: rgba(240, 248, 255, 0.148);
+    stroke: aliceblue;
+    border-radius: 10px;
+    padding: 5px;
 }
 
 .logo {
-    width: 110px;
+    width: 130px;
+}
+
+/* HERO SECTION */
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.hero .butt1 {
+    padding: 15px 30px;
+    border: none;
+    font-family: "DM Sans";
+    font-size: 18px;
+    margin-block: 10px;
+    border-radius: 10px;
+
+}
+
+.hero .butt2 {
+    padding: 15px 30px;
+    border: none;
+    font-family: "DM Sans";
+    font-size: 18px;
+    margin-block: 10px;
+    border-radius: 10px;
+    color: white;
+    background-color: #504baf;
+}
+
+.card {
+
+    h2,
+    p {
+        text-align: left;
+        padding: 0px 40px;
+    }
+}
+
+.card .card1 {
+    img {
+        position: absolute;
+        width: 100px;
+        border-radius: 0px;
+        top: -63px;
+        left: 220px;
+    }
+}
+
+.card .card1,
+.card .card2,
+.card .card3 {
+    h2 {
+        font-size: 30px;
+    }
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background: radial-gradient(circle at 10% 55%,
+        rgba(255, 255, 255, 0.508) 0%,
+        #534eb3 100%);
+    border-radius: 60px;
+    padding: 30px 20px 20px 20px;
 }
