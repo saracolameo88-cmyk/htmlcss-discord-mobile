@@ -20,6 +20,8 @@ body {
 
 .contenitore {
     position: relative;
+    overflow: hidden;
+
     background: linear-gradient(195deg,
             #07002F 5%,
             #1c168f 9%,
@@ -27,7 +29,7 @@ body {
             #504baf 55%,
             #232A9E 75%,
             #15106D 100%);
-    padding: 30px 40px;
+    padding: 30px 30px 400px 30px;
 
     h1,
     h2 {
@@ -62,7 +64,15 @@ body {
 .card {
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 100px;
+}
+
+.contenitore .sfondo {
+    position: absolute;
+    width: 180px;
+    border-radius: 0px;
+    top: 1420px;
+    left: 92px;
 }
 
 /* HEADER MENU */
@@ -145,6 +155,8 @@ body {
         text-align: left;
         padding: 0px 40px;
     }
+
+    z-index: 2;
 }
 
 .card .card1 {
@@ -154,6 +166,18 @@ body {
         border-radius: 0px;
         top: -63px;
         left: 220px;
+    }
+}
+
+.card .card3 {
+
+
+    img {
+        position: absolute;
+        width: 126px;
+        border-radius: 0px;
+        top: -81px;
+        right: 14px;
     }
 }
 
@@ -169,8 +193,67 @@ body {
     flex-direction: column;
     gap: 20px;
     background: radial-gradient(circle at 10% 55%,
-        rgba(255, 255, 255, 0.508) 0%,
+        rgba(255, 255, 255, 0.452) 0%,
         #534eb3 100%);
     border-radius: 60px;
     padding: 30px 20px 20px 20px;
+}
+
+.footer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    position: relative;
+
+    h2 {
+        font-family: "Sigmar";
+        text-transform: uppercase;
+        font-size: 30px;
+        line-height: 0.9;
+        font-weight: lighter;
+        justify-self: center;
+
+    }
+}
+
+.footer .contenitore2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    width: 100%;
+    background-color: #534eb3;
+    padding-top: 151px;
+
+}
+
+.footer .butt3 {
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    border: none;
+    color: #0d042c;
+    width: 150px;
+    font-family: 'DM Sans';
+    font-weight: bold;
+    width: 150px;
+}
+
+.footer .discord {
+    border-radius: 0%;
+    width: 100%;
+    padding: 5px 20px;
+}
+
+.footer .mascotte {
+    position: absolute;
+    width: 384px;
+    height: auto;
+    top: -312px;
+
 }
