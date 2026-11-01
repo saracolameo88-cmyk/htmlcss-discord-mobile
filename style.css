@@ -6,7 +6,8 @@
 
 body {
     position: relative;
-    width: 512px;
+    width: 100%;
+    max-width: 512px;
     /* O il colore di sfondo scuro di Discord che preferisci */
     font-family: "DM Sans", "Sigmar", sans-serif;
     /* Poi metteremo il font corretto se serve */
@@ -53,10 +54,7 @@ body {
         display: block;
         border-radius: 50px;
     }
-}
 
-.container .viedo {
-    border-radius: 50px;
 }
 
 /* DISTANZA DELLE CARD */
@@ -82,7 +80,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 100;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     width: 100%;
     padding: 10px 30px;
@@ -97,7 +95,6 @@ body {
         width: 150px;
         font-family: 'DM Sans';
         font-weight: bold;
-        width: 150px;
         margin-left: auto;
         margin-right: 20px;
     }
@@ -127,7 +124,7 @@ body {
     padding-right: 20px;
 }
 
-.hero .butt1 {
+.hero button {
     padding: 15px 30px;
     border: none;
     font-family: "DM Sans";
@@ -138,40 +135,26 @@ body {
 }
 
 .hero .butt2 {
-    padding: 15px 30px;
-    border: none;
-    font-family: "DM Sans";
-    font-size: 18px;
-    margin-block: 10px;
-    border-radius: 10px;
+
     color: white;
     background-color: #504baf;
 }
 
-.card {
 
-    h2,
-    p {
-        text-align: left;
-        padding: 0px 40px;
-    }
+/* POSIZIONE DELLE IMMAGINI RISPETTO ALLE CARD*/
 
-    z-index: 2;
-}
-
-.card .card1 {
+.card>div:first-child {
     img {
         position: absolute;
         width: 100px;
         border-radius: 0px;
         top: -63px;
-        left: 220px;
+        right: 82px;
+
     }
 }
 
-.card .card3 {
-
-
+.card>div:nth-child(3) {
     img {
         position: absolute;
         width: 126px;
@@ -181,22 +164,29 @@ body {
     }
 }
 
-.card .card1,
-.card .card2,
-.card .card3 {
+.card>div {
+
     h2 {
         font-size: 30px;
     }
 
+    h2,
+    p {
+        width: 80%;
+
+    }
+
+    text-align: left;
     position: relative;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 20px;
     background: radial-gradient(circle at 10% 55%,
         rgba(255, 255, 255, 0.452) 0%,
         #534eb3 100%);
     border-radius: 60px;
-    padding: 30px 20px 20px 20px;
+    padding: 50px 20px 20px 20px;
 }
 
 .footer {
@@ -221,7 +211,8 @@ body {
     }
 }
 
-.footer .contenitore2 {
+.footer>div {
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -250,10 +241,12 @@ body {
     padding: 5px 20px;
 }
 
-.footer .mascotte {
+.contenitore2 .mascotte {
     position: absolute;
-    width: 384px;
+    width: 100%;
+    max-width: 343px;
     height: auto;
-    top: -312px;
-
+    align-items: center;
+    translate: 0% -63%;
+    top: 0;
 }
